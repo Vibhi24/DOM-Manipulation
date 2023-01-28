@@ -71,3 +71,9 @@ label{
     padding: 10px;
     font-size: larger;
 }
+
+@media only screen and (max-width: 600px){
+    #root{
+        flex-direction: column;
+    }
+}
