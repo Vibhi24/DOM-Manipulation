@@ -1,27 +1,7 @@
-// let timerValue = 00;
-// let interval;
-// let start = document.getElementById("start");
-// let stop = document.getElementById("stop");
-// let reset = document.getElementById("reset");
-// let timerPara = document.getElementById("timerPara");
-
 let seconds = 00;
 let minutes = 00;
 let hours = 00;
-// let timer = document.getElementById('timePara')
 let interval;
-
-// start.addEventListener('click', () => {
-//     interval = setInterval(startTimer, 1000)
-// })
-// stop.addEventListener('click', () => {
-//     clearInterval(interval)
-// })
-// reset.addEventListener('click', () => {
-//     clearInterval(interval);
-//     timerValue = '00';
-//     timerPara.innerText = timerValue;
-// })
 
 const startTimer = () => {
     seconds++;
@@ -53,8 +33,6 @@ const createTimer = () => {
     const resetBtn = document.createElement('button')
     const  laps = document.createElement('div')
 
-
-    // timerContainer.classList.add('timerContainer')
     timerContainer.id = "timerContainer"
     timer.classList.add('timer')
     outer_circle.classList.add('outer_circle')
@@ -67,9 +45,6 @@ const createTimer = () => {
     laps.classList.add('laps')
 
     timerParagraph.innerText = "00 : 00 : 00";
-    // startBtn.innerText = "Start";
-    // pauseBtn.innerText = "Pause";
-    // resetBtn.innerText = "Reset";
 
     startBtn.addEventListener('click', () => {
         interval = setInterval(startTimer, 1000)
@@ -102,5 +77,3 @@ const createTimer = () => {
     rootDiv.appendChild(timerContainer)
     return createTimer;
 }
-// createTimer();
-// export default createTimer;
