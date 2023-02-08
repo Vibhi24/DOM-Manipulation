@@ -13,7 +13,7 @@ const decrementCount = () => {
 }
 
 const updateCount = () => {
-    countValue.innerText = `count : ${count}`
+    countValue.innerText = `Count : ${count}`
 }
 
 
@@ -51,11 +51,9 @@ const createCounter = () => {
 
     // add child element 
     counterContainer.appendChild(counter);
-    // counter.appendChild(counterHeading)
     counter.appendChild(outer_circle)
     outer_circle.appendChild(inner_circle)
     inner_circle.appendChild(countPara);
-    // counter.appendChild(countPara);
     counterContainer.appendChild(buttonContainer)
     buttonContainer.appendChild(incrementButton);
     buttonContainer.appendChild(decrementButton);
@@ -63,5 +61,3 @@ const createCounter = () => {
     rootDiv.appendChild(counterContainer)
     return createCounter;
 }
-// createCounter();
-// export default createCounter;
