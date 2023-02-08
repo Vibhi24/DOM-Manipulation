@@ -9,7 +9,7 @@ let seconds = 00;
 let minutes = 00;
 let hours = 00;
 // let timer = document.getElementById('timePara')
-let interval;
+let interval = null;
 
 // start.addEventListener('click', () => {
 //     interval = setInterval(startTimer, 1000)
@@ -51,7 +51,7 @@ const createTimer = () => {
     const startBtn = document.createElement('button')
     const pauseBtn = document.createElement('button')
     const resetBtn = document.createElement('button')
-    const  laps = document.createElement('div')
+    const laps = document.createElement('div')
 
 
     // timerContainer.classList.add('timerContainer')
@@ -72,10 +72,14 @@ const createTimer = () => {
     // resetBtn.innerText = "Reset";
 
     startBtn.addEventListener('click', () => {
+        if(interval !== null){
+            return;
+        }
         interval = setInterval(startTimer, 1000)
     })
     pauseBtn.addEventListener('click', () => {
             clearInterval(interval)
+            interval = null;
         })
     resetBtn.addEventListener('click', () => {
         
@@ -83,6 +87,7 @@ const createTimer = () => {
         seconds = 0;
         minutes = 0;
         hours = 0;
+        interval = null;
         timerPara.innerText = "00 : 00 : 00";
     })
 
