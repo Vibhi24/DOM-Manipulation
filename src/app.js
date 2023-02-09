@@ -6,10 +6,10 @@ function counterFunc() {
     document.getElementById("timerContainer").remove();
   }
   const createCounte = createCounter();
-  var z = document.createElement('div');
-  z.innerHTML = createCounte;
-  z.style.display = "none";
-  document.getElementById("root").appendChild(z);
+  var counter = document.createElement('div');
+  counter.innerHTML = createCounte;
+  counter.style.display = "none";
+  document.getElementById("root").appendChild(counter);
 }
 function timerFunc () {
   if (document.getElementById("counterContainer")) {
@@ -19,10 +19,10 @@ function timerFunc () {
     document.getElementById("timerContainer").remove();
   }
   const createTime = createTimer();
-  var z = document.createElement('div');
-  z.innerHTML = createTime;
-  z.style.display = "none";
-  document.getElementById("root").appendChild(z);
+  var timer = document.createElement('div');
+  timer.innerHTML = createTime;
+  timer.style.display = "none";
+  document.getElementById("root").appendChild(timer);
 }
 
 
