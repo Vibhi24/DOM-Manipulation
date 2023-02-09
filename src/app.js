@@ -1,24 +1,28 @@
-const counterFunc = () => {
-  if (document.getElementById("timerContainer")) {
-    document.getElementById("timerContainer").remove();
-  }
+function counterFunc() {
   if (document.getElementById("counterContainer")) {
     document.getElementById("counterContainer").remove();
+  }
+  if (document.getElementById("timerContainer")) {
+    document.getElementById("timerContainer").remove();
   }
   const createCounte = createCounter();
-  let rootDiv = document.getElementById("root");
-  rootDiv.appendChild(createCounte)
+  var z = document.createElement('div');
+  z.innerHTML = createCounte;
+  z.style.display = "none";
+  document.getElementById("root").appendChild(z);
 }
-const timerFunc = () => {
-  if (document.getElementById("timerContainer")) {
-    document.getElementById("timerContainer").remove();
-  }
+function timerFunc () {
   if (document.getElementById("counterContainer")) {
     document.getElementById("counterContainer").remove();
   }
+  if (document.getElementById("timerContainer")) {
+    document.getElementById("timerContainer").remove();
+  }
   const createTime = createTimer();
-  let rootDiv = document.getElementById("root")
-  rootDiv.appendChild(createTime)
+  var z = document.createElement('div');
+  z.innerHTML = createTime;
+  z.style.display = "none";
+  document.getElementById("root").appendChild(z);
 }
 
 
@@ -34,16 +38,16 @@ const createPage = () => {
   const timerLabel = document.createElement('label')
 
 
-  counterLabel.innerText = "Counter";
+  counterLabel.innerHTML = "Counter";
   counterBtn.name = "radioButton";
   counterBtn.type = "radio";
   counterBtn.value = "Counter";
 
-  timerLabel.innerText = "Timer"
+  timerLabel.innerHTML = "Timer"
   timerBtn.type = "radio";
   timerBtn.value = "Timer";
   timerBtn.name = "radioButton"
-  containerHead.innerText = "COUNTER OR TIMER"
+  containerHead.innerHTML = "COUNTER OR TIMER"
 
   container.classList.add("container");
   containerHead.classList.add("containerHead")
@@ -66,7 +70,6 @@ const createPage = () => {
   btns.appendChild(timerDiv)
   timerDiv.appendChild(timerBtn);
   timerDiv.appendChild(timerLabel);
-  const rootDiv = document.getElementById("root");
-  rootDiv.appendChild(container);
+  document.getElementById("root").appendChild(container);
 }
 createPage();
